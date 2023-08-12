@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slideshow</title>
+    <style>
+        /* Base CSS styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-image: url("food/img11.jpg");
+            background-size: cover; /* Adjust to cover the entire element */
+            background-position: center; /* Position the image in the center */
+            background-repeat: no-repeat; /* Prevent image repetition */
+            height: 100vh; /* Adjust the height of the element */
+        }
+
+        h1 {
+            margin-top: 20px;
+            color: #333;
+        }
+
+        #slideshow-container {
+            position: relative;
+            max-width: 800px ;
+            margin: 200px 0px 0px 0px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .slide {
+            display: none;
+            width: 100%;
+            text-align: center;
+            position: relative;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .caption {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+	<audio autoplay loop>
+        <source src="music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    	</audio>
+
+
+   
+    <div id="slideshow-container">
+        <div class="slide">
+            <img src="food/img1.jpg" alt="Image 1">
+        </div>
+
+        <div class="slide">
+            <img src="food/img2.jpg" alt="Image 2">
+        </div>
+	<div class="slide">
+            <img src="food/img4.jpg" alt="Image 4">
+        </div>
+	<div class="slide">
+            <img src="food/img5.jpg" alt="Image 5">
+        </div>
+<div class="slide">
+            <img src="food/img6.jpg" alt="Image 5">
+        </div>
+<div class="slide">
+            <img src="food/img7.jpg" alt="Image 5">
+        </div>
+<div class="slide">
+            <img src="food/img8.jpg" alt="Image 5">
+        </div>
+<div class="slide">
+            <img src="food/img9.jpg" alt="Image 5">
+        </div>
+<div class="slide">
+            <img src="food/img10.jpg" alt="Image 5">
+        </div>
+<div class="slide">
+            <img src="food/img11.jpg" alt="Image 5">
+        </div>
+<div class="slide">
+            <img src="food/img12.jpg" alt="Image 5">
+        </div>
+<div class="slide">
+            <img src="food/img13.jpg" alt="Image 5">
+        </div>
+<div class="slide">
+            <img src="food/img14.jpg" alt="Image 5">
+        </div>
+<div class="slide">
+            <img src="food/img15.jpg" alt="Image 5">
+        </div>
+<div class="slide">
+            <img src="food/img16.jpg" alt="Image 5">
+        </div>
+<div class="slide">
+            <img src="food/img17.jpg" alt="Image 5">
+        </div>
+<div class="slide">
+            <img src="food/img18.jpg" alt="Image 5">
+        </div>
+<div class="slide">
+            <img src="food/img19.jpg" alt="Image 5">
+        </div>
+<div class="slide">
+            <img src="food/img20.jpg" alt="Image 5">
+        </div>
+<div class="slide">
+            <img src="food/img21.jpg" alt="Image 5">
+        </div>
+<div class="slide">
+            <img src="food/img22.jpg" alt="Image 5">
+        </div>
+<div class="slide">
+            <img src="food/img23.jpg" alt="Image 5">
+        </div>
+<div class="slide">
+            <img src="food/img24.jpg" alt="Image 5">
+        </div>
+<div class="slide">
+            <img src="food/img25.jpg" alt="Image 5">
+        </div>
+<div class="slide">
+            <img src="food/img26.jpg" alt="Image 5">
+        </div>
+<div class="slide">
+            <img src="food/img27.jpg" alt="Image 5">
+        </div>
+<div class="slide">
+            <img src="food/img28.jpg" alt="Image 5">
+        </div>
+<div class="slide">
+            <img src="food/img29.jpg" alt="Image 5">
+        </div>
+<div class="slide">
+            <img src="food/img30.jpg" alt="Image 5">
+        </div>
+<div class="slide">
+            <img src="food/img31.jpg" alt="Image 5">
+        </div>
+<div class="slide">
+            <img src="food/img32.jpg" alt="Image 5">
+        </div>
+<div class="slide">
+            <img src="food/img33.jpg" alt="Image 5">
+        </div>
+<div class="slide">
+            <img src="food/img34.jpg" alt="Image 5">
+        </div>
+<div class="slide">
+            <img src="food/img35.jpg" alt="Image 5">
+        </div>
+<div class="slide">
+            <img src="food/img36.jpg" alt="Image 5">
+        </div>
+<div class="slide">
+            <img src="food/img37.jpg" alt="Image 5">
+        </div>
+<div class="slide">
+            <img src="food/img38.jpg" alt="Image 5">
+        </div>
+
+
+
+        <!-- Add more slide divs for additional images -->
+    </div>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            const slides = document.getElementsByClassName("slide");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 5000); // Change slide every 2 seconds
+        }
+
+    </script>
+</body>
+</html>

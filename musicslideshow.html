@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slideshow with Background Music</title>
+    <style>
+        /* Base CSS styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url("ss/img34.jpg");
+            background-size: cover; /* Adjust to cover the entire element */
+            background-position: center; /* Position the image in the center */
+            background-repeat: no-repeat; /* Prevent image repetition */
+            height: 100vh; /* Adjust the height of the element */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+            position: relative;
+            max-width: 800px;
+            overflow: hidden; /* Prevent images from overflowing */
+        }
+
+        /* Slides */
+        .slide {
+            display: none;
+            text-align: center;
+        }
+
+        /* Images in slides */
+        .slide img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Play button styles */
+        .play-button {
+            margin-top: 180px;
+            padding: 20px 40px;
+            background-color: #808B96 ;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Audio player styles */
+        audio {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="slideshow-container">
+        <div class="slide">
+            <img src="ss/img1.jpg" alt="Image 1">
+        </div>
+<div class="slide">
+            <img src="ss/img2.jpg" alt="Image 1">
+        </div>
+<div class="slide">
+            <img src="ss/img3.jpg" alt="Image 1">
+        </div>
+<div class="slide">
+            <img src="ss/img4.jpg" alt="Image 1">
+        </div>
+<div class="slide">
+            <img src="ss/img5.jpg" alt="Image 1">
+        </div>
+<div class="slide">
+            <img src="ss/img6.jpg" alt="Image 1">
+        </div>
+<div class="slide">
+            <img src="ss/img7.jpg" alt="Image 1">
+        </div>
+<div class="slide">
+            <img src="ss/img8.jpg" alt="Image 1">
+        </div>
+<div class="slide">
+            <img src="ss/img9.jpg" alt="Image 1">
+        </div>
+<div class="slide">
+            <img src="ss/img10.jpg" alt="Image 1">
+        </div>
+<div class="slide">
+            <img src="ss/img11.jpg" alt="Image 1">
+        </div>
+<div class="slide">
+            <img src="ss/img12.jpg" alt="Image 1">
+        </div>
+<div class="slide">
+            <img src="ss/img13.jpg" alt="Image 1">
+        </div>
+<div class="slide">
+            <img src="ss/img14.jpg" alt="Image 1">
+        </div>
+<div class="slide">
+            <img src="ss/img15.jpg" alt="Image 1">
+        </div>
+<div class="slide">
+            <img src="ss/img16.jpg" alt="Image 1">
+        </div>
+<div class="slide">
+            <img src="ss/img17.jpg" alt="Image 1">
+        </div>
+<div class="slide">
+            <img src="ss/img18.jpg" alt="Image 1">
+        </div>
+<div class="slide">
+            <img src="ss/img19.jpg" alt="Image 1">
+        </div>
+<div class="slide">
+            <img src="ss/img21.jpg" alt="Image 1">
+        </div>
+<div class="slide">
+            <img src="ss/img22.jpg" alt="Image 1">
+        </div>
+<div class="slide">
+            <img src="ss/img23.jpg" alt="Image 1">
+        </div>
+<div class="slide">
+            <img src="ss/img24.jpg" alt="Image 1">
+        </div>
+<div class="slide">
+            <img src="ss/img25.jpg" alt="Image 1">
+        </div>
+<div class="slide">
+            <img src="ss/img26.jpg" alt="Image 1">
+        </div>
+<div class="slide">
+            <img src="ss/img27.jpg" alt="Image 1">
+        </div>
+<div class="slide">
+            <img src="ss/img28.jpg" alt="Image 1">
+        </div>
+<div class="slide">
+            <img src="ss/img29.jpg" alt="Image 1">
+        </div>
+<div class="slide">
+            <img src="ss/img30.jpg" alt="Image 1">
+        </div>
+<div class="slide">
+            <img src="ss/img31.jpg" alt="Image 1">
+        </div>
+<div class="slide">
+            <img src="ss/img32.jpg" alt="Image 1">
+        </div>
+<div class="slide">
+            <img src="ss/img34.jpg" alt="Image 1">
+        </div>
+
+        <!-- Play button -->
+        <button class="play-button" id="playButton">Play</button>
+    </div>
+
+    <!-- Audio player -->
+    <audio id="backgroundAudio" loop>
+        <source src="music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        const playButton = document.getElementById('playButton');
+        const backgroundAudio = document.getElementById('backgroundAudio');
+        const slides = document.querySelectorAll('.slide');
+        let slideIndex = 0;
+
+        playButton.addEventListener('click', () => {
+            // Hide the play button
+            playButton.style.display = 'none';
+
+            // Play audio
+            backgroundAudio.play();
+
+            // Start the slideshow
+            slides[slideIndex].style.display = 'block';
+            slideIndex++;
+            if (slideIndex >= slides.length) {
+                slideIndex = 0;
+            }
+            setInterval(() => {
+                slides.forEach(slide => {
+                    slide.style.display = 'none';
+                });
+                slides[slideIndex].style.display = 'block';
+                slideIndex++;
+                if (slideIndex >= slides.length) {
+                    slideIndex = 0;
+                }
+            }, 3000);
+        });
+    </script>
+</body>
+</html>

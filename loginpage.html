@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        /* Base CSS styles */
+        body {
+    	margin: 0;
+    	padding: 0;
+    	font-family: Arial, sans-serif;
+    	background-image: url("ss/img35.jpg");
+    	background-size: cover; /* Adjust to cover the entire element */
+    	background-position: center; /* Position the image in the center */
+    	background-repeat: no-repeat; /* Prevent image repetition */
+    	display: flex;
+    	align-items: center;
+    	justify-content: center;
+    	height: 100vh;
+	}
+
+        .login-container {
+            background-color: #fff;
+            padding: 20px;
+	    padding-right: 40px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+	    text-align: center;
+        }
+
+        .login-input {
+    	display: block;
+    	width: 100%;
+    	margin: 10px 0;
+    	padding: 10px;
+    	border: 1px solid #ccc;
+    	border-radius: 5px;
+        }
+
+        .login-button {
+            	margin-top: 20px;
+    		margin: 0 auto; /* Center-align the button horizontally */
+    		padding: 10px 20px;
+    		background-color: #333;
+    		color: #fff;
+    		border: none;
+    		border-radius: 5px;
+    		cursor: pointer;
+        	}
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Happy Birthday!!</h1>
+        <form id="loginForm" onsubmit="return validateLogin()">
+            <input class="login-input" type="text" id="username" placeholder="Username" required>
+            <input class="login-input" type="password" id="password" placeholder="Password" required>
+            <button class="login-button" type="submit">Login</button>
+        </form>
+    </div>
+
+    <script>
+        function validateLogin() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            if (username === "skarma" && password === "13082001") {
+                window.location.href = "photo_collage.html"; // Redirect to the photo collage page
+                return false;
+            } else {
+                alert("Invalid login credentials. Please try again.");
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
